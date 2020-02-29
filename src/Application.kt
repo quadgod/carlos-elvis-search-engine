@@ -1,6 +1,7 @@
 package com.elvis.carlos
 
 import com.elvis.carlos.middlewares.*;
+import com.elvis.carlos.utils.createHttpClient
 import com.github.mustachejava.DefaultMustacheFactory
 import io.ktor.application.Application
 import io.ktor.application.call

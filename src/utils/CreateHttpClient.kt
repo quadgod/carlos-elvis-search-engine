@@ -6,5 +6,9 @@ import io.ktor.util.KtorExperimentalAPI
 
 @KtorExperimentalAPI
 fun createHttpClient(): HttpClient {
-    return HttpClient(engineFactory = CIO)
+    return HttpClient(engineFactory = CIO) {
+        engine {
+            maxConnectionsCount = 3
+        }
+    }
 }

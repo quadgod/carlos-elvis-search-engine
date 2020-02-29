@@ -11,13 +11,20 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-8">
+        <div class="col-12">
             <form method="get" action="/" class="carlos-search-form">
                 <div class="form-row">
                     <input type="text" class="form-control" name="search" value="{{data.search}}" placeholder="Search here">
                 </div>
             </form>
         </div>
+    </div>
+    <div class="row">
+        <ul>
+        {{#data.frameworks}}
+        <li>{{name}} ({{rating}})</li>
+        {{/data.frameworks}}
+        </ul>
     </div>
 </div>
 {{> footer}}
