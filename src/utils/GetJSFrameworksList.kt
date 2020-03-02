@@ -27,7 +27,7 @@ suspend fun getJSFrameworksList(
         frameworks["react"] = frameworks.getOrDefault("react", 0).inc()
     }
 
-    if (content.contains(".ng-binding") ||
+    if (content.contains("ng-binding") ||
         content.contains("[ng-app]") ||
         content.contains("[data-ng-app]") ||
         content.contains("[ng-controller]") ||
