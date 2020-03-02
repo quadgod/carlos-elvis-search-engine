@@ -10,6 +10,9 @@ import java.lang.Exception
 
 suspend fun ApplicationCall.indexPage() {
     val query = request.queryParameters["search"]?.trim() ?: ""
-    val frameworks = search(query)
+    val frameworks = try { search(query) } catch (error: Exception) {
+        println(error.message)
+        listOf<Framework>()
+    }
     response.call.respond(MustacheContent("index.hbs", mapOf("data" to SearchResponse(query, frameworks))))
 }
