@@ -1,10 +1,8 @@
 package com.elvis.carlos
 
-import com.elvis.carlos.middlewares.*;
-import com.elvis.carlos.utils.createHttpClient
+import com.elvis.carlos.middlewares.*
 import com.github.mustachejava.DefaultMustacheFactory
 import io.ktor.application.Application
-import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.mustache.Mustache
 import io.ktor.routing.get
@@ -21,6 +19,8 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
-        get("/") { call.run { indexPage() } }
+        get("/") {
+            indexPage()
+        }
     }
 }
