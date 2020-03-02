@@ -5,10 +5,8 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.readText
 import io.ktor.http.HttpStatusCode
-import io.ktor.util.KtorExperimentalAPI
 import java.util.concurrent.ConcurrentHashMap
 
-@KtorExperimentalAPI
 suspend fun getJSFrameworksList(
     i: Int,
     url: String,

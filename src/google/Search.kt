@@ -8,12 +8,10 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.readText
 import io.ktor.http.HttpStatusCode
-import io.ktor.util.KtorExperimentalAPI
 import kotlinx.coroutines.*
 import java.net.URLEncoder
 import java.util.concurrent.ConcurrentHashMap
 
-@KtorExperimentalAPI
 suspend fun search(
     query: String,
     createClient: () -> HttpClient = { createHttpClient() }
